@@ -1,0 +1,180 @@
+/* background umum */
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #f9fafb;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top left, #1f163f 0, #050716 55%, #02010a 100%);
+  }
+  
+  /* back button */
+  .btn-back {
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    color: #e5e7eb;
+  }
+  
+  .btn-back i {
+    font-size: 0.9rem;
+  }
+  
+  .project-detail {
+    padding-bottom: 80px;
+  }
+  
+  .project-title {
+    font-size: clamp(2.4rem, 3.5vw, 3.1rem);
+    font-weight: 800;
+  }
+  
+  .breadcrumb-text span {
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+  
+  .project-desc {
+    color: #e5e7eb;
+    max-width: 640px;
+  }
+  
+  /* stats */
+  .stat-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: radial-gradient(circle at top left,
+                rgba(148, 163, 184, 0.18),
+                rgba(15, 23, 42, 0.98));
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.9);
+  }
+  
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top,
+                rgba(168, 85, 255, 0.6),
+                rgba(15, 23, 42, 1));
+    color: #ede9fe;
+  }
+  
+  .stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+    color: #cbd5f5;
+  }
+  
+  /* buttons */
+  .btn-main {
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #6366f1, #a855ff);
+    border: none;
+    color: #fff;
+    box-shadow: 0 18px 40px rgba(88, 28, 135, 0.6);
+  }
+  
+  .btn-outline-main {
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-weight: 600;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    color: #e5e7eb;
+    background: rgba(15, 23, 42, 0.9);
+  }
+  
+  /* technologies */
+  .tech-section {
+    margin-top: 8px;
+  }
+  
+  .tech-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e5e7eb;
+  }
+  
+  .tech-chip {
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    color: #e5e7eb;
+  }
+  
+  /* preview image */
+  .preview-card {
+    border-radius: 26px;
+    overflow: hidden;
+    background: radial-gradient(circle at top left,
+                rgba(248, 250, 252, 0.06),
+                rgba(15, 23, 42, 0.98));
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    box-shadow: 0 28px 90px rgba(15, 23, 42, 0.95);
+  }
+  
+  .preview-card img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* features card */
+  .features-card {
+    border-radius: 24px;
+    padding: 22px 24px 24px;
+    background: radial-gradient(circle at top left,
+                rgba(148, 163, 184, 0.16),
+                rgba(15, 23, 42, 0.98));
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.95);
+  }
+  
+  .features-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .features-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #e5e7eb;
+  }
+  
+  .features-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a855ff;
+  }
+  
+  /* responsive */
+  @media (max-width: 767.98px) {
+    .project-detail {
+      padding-top: 10px;
+      padding-bottom: 60px;
+    }
+  }
+  

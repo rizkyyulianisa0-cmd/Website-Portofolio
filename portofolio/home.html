@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Nisa Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <!--Menggunakan Bootstrap 5 navbar dengan class-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold" href="#">Nisa</a>
+      <!---Button toggler-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Menu-->
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <!--list menu d-->
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO KIRI -->
+  <section class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <!-- KIRI SAJA YANG ISI, KANAN KOSONG -->
+         
+        <div class="col-lg-5 col-md-7">
+          <button class="btn btn-sm btn-glass mb-4">
+            <span class="me-2">⚡</span>Ready to Innovate
+          </button>
+
+          <h1 class="hero-title">Frontend</h1>
+          <h1 class="hero-title gradient-text mb-3">Developer</h1>
+
+          <p class="subtitle mb-1">Manajemen &amp; Informatika</p>
+
+          <p class="hero-desc mb-4">
+            Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+          </p>
+
+          <div class="mb-4">
+            <span class="tech-badge me-2 mb-2">Javascript</span>
+            <span class="tech-badge me-2 mb-2">HTML</span>
+            <span class="tech-badge me-2 mb-2">KNIME</span>
+            <span class="tech-badge me-2 mb-2">Figma</span>
+          </div>
+
+          <div class="mb-5">
+            <a href="#portfolio" class="btn btn-primary btn-main me-3">Projects</a>
+            <a href="#contact" class="btn btn-outline-light btn-main">Contact</a>
+          </div>
+
+          <div class="d-flex gap-3">
+            <a href="https://github.com/rizkyyulianisa0-cmd" class="social-icon"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/rizky-yulianisa-86a44b378/" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/rizky__yulianisa?igsh=MTg2N3ZpZ2RicGU0NA==" class="social-icon"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- KANAN KOSONG UNTUK RUANG GELAP -->
+        <div class="col-lg-7 d-none d-lg-block"></div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- teks kiri -->
+            <div class="col-lg-6 mb-4 mb-lg-0 about-text">
+              <p class="about-label mb-2">About Me</p>
+              <h2 class="about-title mb-3">Hello, I'm<br>Rizky Yulianisa</h2>
+              <p class="about-desc">
+                Seorang Mahasiswa Manajemen Informatika yang memiliki ketertarikan besar
+                dalam pengembangan Front-End. Saya berfokus pada pembuatan pengalaman
+                digital yang menarik dan selalu berusaha memberikan solusi terbaik
+                dalam setiap proyek yang saya kerjakan.
+              </p>
+              <div class="about-quote mt-4">
+                <span class="quote-icon">❝</span>
+                <span class="quote-text">
+                  "Transforming ideas into engaging digital experiences."
+                </span>
+              </div>
+            </div>
+    
+            <!-- foto kanan -->
+            <div class="col-lg-6 d-flex justify-content-lg-end justify-content-center">
+              <div class="about-photo-wrapper">
+                <img src="nisa.jpeg" alt="Foto Nisa" class="about-photo img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        const aboutSection = document.querySelector('.about-section');
+    
+        function checkAboutInView() {
+          const rect = aboutSection.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 150) {
+            aboutSection.classList.add('in-view');
+            window.removeEventListener('scroll', checkAboutInView);
+          }
+        }
+    
+        window.addEventListener('scroll', checkAboutInView);
+        // cek sekali saat load
+        checkAboutInView();
+      </script>
+    <script>
+        // ambil semua link navbar
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      
+        navLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            // hapus active dari semua
+            navLinks.forEach(l => l.classList.remove('active'));
+            // kasih active ke link yang diklik
+            this.classList.add('active');
+          });
+        });
+      </script>
+      
+<!-- PORTFOLIO STATS -->
+<section id="portfolio" class="portfolio-stats-section py-5">
+  <div class="container">
+
+    <!-- Row tombol -->
+    <div class="d-flex flex-wrap gap-3 mb-5">
+      <a href="CVATSRIZKYYULIANISA__.pdf" class="btn btn-download">
+        <i class="bi bi-file-earmark-arrow-down me-2"></i>Download CV
+      </a>
+      <a href="#ps-projects" class="btn btn-view">
+        <span class="me-2"><i class="bi bi-code-slash"></i></span>View Projects
+      </a>
+    </div>
+
+    <!-- Row cards -->
+    <div class="row g-4">
+      <!-- card 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="bi bi-layout-text-window-reverse"></i>
+          </div>
+          <div class="stat-value">7</div>
+          <div class="stat-label">Total Projects</div>
+          <p class="stat-desc">Innovative web solutions crafted</p>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="bi bi-award"></i>
+          </div>
+          <div class="stat-value">6</div>
+          <div class="stat-label">Certificates</div>
+          <p class="stat-desc">Professional skills validated</p>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="bi bi-globe2"></i>
+          </div>
+          <div class="stat-value">2</div>
+          <div class="stat-label">Years of Experience</div>
+          <p class="stat-desc">Continuous learning journey</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="portfolio-showcase py-5">
+  <div class="container">
+    <h2 class="portfolio-title text-center mb-2">Portfolio Showcase</h2>
+    <p class="portfolio-subtitle text-center mb-5">
+      Explore my journey through projects, certifications, and technical expertise.
+    </p>
+
+    <!-- Tabs -->
+    <div class="ps-tabs mb-4">
+      <button class="ps-tab-btn active" data-target="ps-projects">
+        <i class="bi bi-code-slash me-2"></i>Projects
+      </button>
+      <button class="ps-tab-btn" data-target="ps-certificates">
+        <i class="bi bi-person-badge me-2"></i>Certificates
+      </button>
+      <button class="ps-tab-btn" data-target="ps-techstack">
+        <i class="bi bi-diagram-3 me-2"></i>Tech Stack
+      </button>
+    </div>
+
+    <!-- CONTENT: PROJECTS -->
+    <div id="ps-projects" class="ps-tab-content active">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="ps-card">
+            <div class="ps-card-image">
+              <img src="katalogweb.png" alt="Project 1">
+            </div>
+            <div class="ps-card-body">
+              <h5 class="ps-card-title">Katalog PKM Polsri</h5>
+              <p class="ps-card-text">
+                Website katalog online menggunakan html, css, dan php.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="katalogpkm.html" class="ps-link">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- project 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="ps-card">
+            <div class="ps-card-image">
+              <img src="hmjmiweb.png" alt="Project 2">
+            </div>
+            <div class="ps-card-body">
+              <h5 class="ps-card-title">Website HMJMI Polsri</h5>
+              <p class="ps-card-text">
+                Dashboard interaktif untuk memantau data dan metrik penting secara real‑time.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="hmjmi.html" class="ps-link">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- project 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="ps-card">
+            <div class="ps-card-image">
+              <img src="floristweb.png" alt="Project 3">
+            </div>
+            <div class="ps-card-body">
+              <h5 class="ps-card-title">Florist Web</h5>
+              <p class="ps-card-text">
+                Website landing page modern dengan fokus pada pengalaman pengguna yang halus.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="florist-detail.html" class="ps-link">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT: CERTIFICATES -->
+    <div id="ps-certificates" class="ps-tab-content">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="cert-card">
+            <img src="sert1.jpeg" alt="Certificate 1">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="cert-card">
+            <img src="sert5.png" alt="Certificate 2">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="cert-card">
+            <img src="sert4.png" alt="Certificate 3">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT: TECH STACK -->
+    <div id="ps-techstack" class="ps-tab-content">
+      <div class="row g-4">
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="tech-card">
+            <img src="html.svg" alt="HTML">
+            <span>HTML</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="tech-card">
+            <img src="javascript.svg" alt="JavaScript">
+            <span>JavaScript</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="tech-card">
+            <img src="css.svg" alt="CSS">
+            <span>CSS</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="tech-card">
+            <img src="knime1.png" alt="Knime">
+            <span>Knime</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="tech-card">
+            <img src="figma.png" alt="Figma">
+            <span>Figma</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="tech-card">
+            <img src="phyton.png" alt="Python">
+            <span>Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const tabBtns = document.querySelectorAll('.ps-tab-btn');
+  const tabContents = document.querySelectorAll('.ps-tab-content');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+</script>
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="contact-title">Hubungi Saya</h2>
+      <p class="contact-subtitle">
+        Punya pertanyaan? Kirimi saya pesan, dan saya akan segera membalasnya.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card Hubungi -->
+      <div class="col-lg-6">
+        <div class="contact-card slide-left">
+          <h3 class="contact-card-title mb-3">Hubungi</h3>
+          <p class="contact-card-text mb-4">
+            Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara.
+          </p>
+
+          <form>
+            <div class="mb-3">
+              <label class="form-label-contact">Nama Anda</label>
+              <div class="input-wrapper">
+                <i class="bi bi-person"></i>
+                <input type="text" class="form-control-contact" placeholder="Masukkan nama anda">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-contact">Email Anda</label>
+              <div class="input-wrapper">
+                <i class="bi bi-envelope"></i>
+                <input type="email" class="form-control-contact" placeholder="Masukkan email anda">
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label-contact">Pesan</label>
+              <div class="input-wrapper textarea">
+                <i class="bi bi-chat-dots"></i>
+                <textarea class="form-control-contact" rows="3" placeholder="Tulis pesan anda..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-contact-send">
+              Kirim Pesan
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Card Connect With Me -->
+      <div class="col-lg-6">
+        <div class="contact-card slide-right">
+          <h3 class="contact-card-title mb-4">
+            <span class="section-bullet"></span>Connect With Me
+          </h3>
+
+          <div class="connect-main mb-3">
+            <div class="connect-icon big">
+              <i class="bi bi-linkedin"></i>
+            </div>
+            <div>
+              <div class="connect-title">Let's Connect</div>
+              <div class="connect-subtitle">
+                <a href="https://www.linkedin.com/in/rizky-yulianisa-86a44b378/" class="connect-link" target="_blank">
+                  linkedin.com/in/username
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="connect-item">
+                <div class="connect-icon insta"><i class="bi bi-instagram"></i></div>
+                <div>
+                  <div class="connect-title">Instagram</div>
+                  <div class="connect-subtitle">
+                    <a href="https://www.instagram.com/rizky__yulianisa?igsh=MTg2N3ZpZ2RicGU0NA==" class="connect-link" target="_blank">@rizky__yulianisa</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="connect-item">
+                <div class="connect-icon yt"><i class="bi bi-youtube"></i></div>
+                <div>
+                  <div class="connect-title">Youtube</div>
+                  <div class="connect-subtitle">
+                    <a href="https://www.youtube.com/@rizkyyulianisa8551" class="connect-link" target="_blank">@nisa</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="connect-item">
+                <div class="connect-icon gh"><i class="bi bi-github"></i></div>
+                <div>
+                  <div class="connect-title">Github</div>
+                  <div class="connect-subtitle">
+                    <a href="https://github.com/rizkyyulianisa0-cmd" class="connect-link" target="_blank">github.com/user</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="connect-item">
+                <div class="connect-icon tk"><i class="bi bi-tiktok"></i></div>
+                <div>
+                  <div class="connect-title">Tiktok</div>
+                  <div class="connect-subtitle">
+                    <a href="https://www.tiktok.com/id-ID/" class="connect-link" target="_blank">@user</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer text-center py-4">
+  <small>© 2025 Nisa™. All Rights Reserved.</small>
+</footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- File JS custom -->
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
